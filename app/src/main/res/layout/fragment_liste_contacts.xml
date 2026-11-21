@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,10 +12,16 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_filter"
+            style="@style/Widget.ContactsV4.SearchField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:hint="@string/filter_hint">
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_padding"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/filter_hint"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_search">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_filter"
@@ -30,24 +38,58 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:clipToPadding="false"
-            android:paddingBottom="88dp" />
+            android:paddingStart="@dimen/list_side_padding"
+            android:paddingTop="8dp"
+            android:paddingEnd="@dimen/list_side_padding"
+            android:paddingBottom="96dp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_empty"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/empty_state"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/empty_list"
-        android:visibility="gone" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_empty_contacts" />
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/empty_list"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textColor="?attr/colorOnSurface" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/empty_list_hint"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
+        android:layout_margin="20dp"
         android:contentDescription="@string/add_contact"
+        app:backgroundTint="?attr/colorPrimary"
+        app:elevation="2dp"
         app:srcCompat="@drawable/ic_add"
-        xmlns:app="http://schemas.android.com/apk/res-auto" />
+        app:tint="?attr/colorOnPrimary" />
 </FrameLayout>

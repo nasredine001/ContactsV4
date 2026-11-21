@@ -55,11 +55,11 @@ class CarteContactFragment : Fragment() {
     private fun showMessage(res: Int) {
         binding.map.isVisible = false
         binding.tvMessage.setText(res)
-        binding.tvMessage.isVisible = true
+        binding.mapMessage.isVisible = true
     }
 
     private fun showMap(contact: Contact, lat: Double, lon: Double) {
-        binding.tvMessage.isVisible = false
+        binding.mapMessage.isVisible = false
         binding.map.isVisible = true
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment ?: return
         mapFragment.getMapAsync { googleMap ->

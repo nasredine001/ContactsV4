@@ -8,6 +8,7 @@
             app:entries="@array/tailles_libelles"
             app:entryValues="@array/tailles_valeurs"
             app:defaultValue="16"
+            app:icon="@drawable/ic_text_size"
             app:useSimpleSummaryProvider="true" />
 
         <ListPreference
@@ -16,6 +17,7 @@
             app:entries="@array/couleurs_libelles"
             app:entryValues="@array/couleurs_valeurs"
             app:defaultValue="#000000"
+            app:icon="@drawable/ic_palette"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
 
@@ -25,6 +27,7 @@
             app:title="@string/pref_appel_titre"
             app:summaryOn="@string/pref_actif"
             app:summaryOff="@string/pref_inactif"
-            app:defaultValue="false" />
+            app:defaultValue="false"
+            app:icon="@drawable/ic_call" />
     </PreferenceCategory>
 </PreferenceScreen>

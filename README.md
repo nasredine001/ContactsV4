@@ -20,6 +20,14 @@ com.example.contacts
 └── util/  PreferencesManager, ContactValidator, PhotoUtils, IntentUtils
 ```
 
+## Interface
+
+Le thème Material 3 utilise une palette indigo douce, avec un mode sombre complet.
+La liste présente une barre de recherche arrondie, des cartes de contact avec avatar et
+un état vide illustré. La fiche contact est organisée en sections « Identité » et
+« Localisation », avec des champs arrondis et des actions illustrées. Les écrans
+s’adaptent au paysage (contenu centré) et l’écran Paramètres affiche des icônes.
+
 ## Tests
 
 Le projet contient 23 tests automatisés :

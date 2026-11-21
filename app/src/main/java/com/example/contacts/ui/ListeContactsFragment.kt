@@ -37,7 +37,7 @@ class ListeContactsFragment : Fragment() {
 
         viewModel.contacts.observe(viewLifecycleOwner) { list ->
             adapter.submitList(list)
-            binding.tvEmpty.isVisible = list.isEmpty()
+            binding.emptyState.isVisible = list.isEmpty()
         }
         binding.etFilter.doAfterTextChanged { viewModel.setQuery(it?.toString().orEmpty()) }
         binding.fab.setOnClickListener { openDetail(0L) }   // 0 = mode création

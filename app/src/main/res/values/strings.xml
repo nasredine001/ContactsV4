@@ -9,10 +9,15 @@
     <string name="title_map">Carte</string>
     <string name="title_settings">Paramètres</string>
 
-    <string name="filter_hint">Rechercher (nom, prénom, téléphone)</string>
+    <string name="filter_hint">Rechercher un contact</string>
     <string name="empty_list">Aucun contact à afficher</string>
+    <string name="empty_list_hint">Appuyez sur + pour ajouter un contact.</string>
     <string name="add_contact">Ajouter un contact</string>
     <string name="call_cd">Appeler</string>
+
+    <string name="photo_label">Photo du contact</string>
+    <string name="section_identity">Identité</string>
+    <string name="section_location">Localisation</string>
 
     <string name="hint_nom">Nom</string>
     <string name="hint_prenom">Prénom</string>
@@ -25,7 +30,7 @@
     <string name="btn_camera">Caméra</string>
     <string name="btn_call">Appeler</string>
     <string name="btn_email">E-mail</string>
-    <string name="btn_map">Voir sur la carte</string>
+    <string name="btn_map">Carte</string>
     <string name="btn_save">Enregistrer</string>
     <string name="btn_cancel">Annuler</string>
     <string name="btn_delete">Supprimer</string>
