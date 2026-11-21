@@ -22,18 +22,19 @@ com.example.contacts
 
 ## Tests
 
-Le projet contient 19 tests automatisés :
+Le projet contient 23 tests automatisés :
 
 ```bash
 ./gradlew testDebugUnitTest          # 7 tests JVM (validation des champs/coordonnées)
-./gradlew connectedDebugAndroidTest  # 12 tests instrumentés (nécessite un émulateur/appareil)
+./gradlew connectedDebugAndroidTest  # 16 tests instrumentés (nécessite un émulateur/appareil)
 ```
 
 Les tests instrumentés couvrent : l’insertion unique des contacts de démonstration, le CRUD complet,
 les apostrophes et jokers SQL (`'`, `%`, `_`), les colonnes NULL, le tri `COLLATE NOCASE`,
-la lecture/conversion des préférences, ainsi que le parcours UI (filtre, création,
-modification, suppression avec confirmation, taille de police et bouton Appeler appliqués
-immédiatement).
+la lecture/conversion des préférences, le parcours UI (filtre, création, modification,
+suppression avec confirmation, taille de police et bouton Appeler appliqués immédiatement),
+ainsi que la rotation paysage/portrait de la liste, d’une saisie en cours, d’une fiche
+existante et de l’écran Paramètres (état conservé, pas de fragment dupliqué).
 
 > Sur un émulateur, désactivez les animations pour les tests Espresso :
 > `adb shell settings put global window_animation_scale 0` (et
